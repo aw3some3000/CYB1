@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/main.css" />
+		<meta charset=utf8 />
+	<style> 
+		.picture-holder a {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+	
+	<script>
+		function increase_cat() {
+			document.getElementById("cat").style.width = "400px";
+			document.getElementById("hdr1").innerText = "Мяу!";
+		}
+
+		function oncat() {
+    		var audio = document.getElementsByTagName("audio")[0];
+				audio.volume = 0.1;	
+				audio.play();
+		}
+		function outcat() {
+    		var audio = document.getElementsByTagName("audio")[0];
+					audio.stop();
+		};
+
+	</script>
+	
+		<title>Кошка</title>
+	</head>
+	<body>
+		<h1 id="hdr1">Это кошка</h1>
+		<div class="picture-holder">
+			<a href="index_.html">Оглавление сайта</a>
+			<img src="images/cat.jpg" id="cat" onmouseover="oncat()" onmouseout="outcat()" />
+			<audio>
+				<source src="sounds/playful-cat.mp3" type="audio/mpeg">
+				</audio>
+		</div>
+		
+	</body>
+<html>
