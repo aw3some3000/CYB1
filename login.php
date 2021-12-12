@@ -6,9 +6,9 @@
         <link href="styles/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-    <div class="login">
+        <div class="login">
             <h1>Login, please!</h1>
-		    <form action="check_login.php" method="post" autocomplete="off">
+            <form action="check_login.php" method="post" autocomplete="off">
 				<label for="user">
 					<i class="fas fa-user"></i>
 				</label>
@@ -18,10 +18,15 @@
 				</label>
 				<input type="password" name="pwd" placeholder="Password" id="password" required>
 				<input type="submit" value="Login">
-			</form>
-		</div>
+                <p>
+  		            Not a member yet? <a href="register.php">Sign up</a>
+  	            </p>
+            </form>
+        </div>
     </body>
 </html>
+
+
 <!--
     Предыдущий код
     <h1>Login, please!</h1>

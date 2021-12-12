@@ -98,7 +98,8 @@ body {
         padding: 0 15px;
     }
 .login form input[type="submit"] {
-        width: 100%;
+        display: inline-flexbox;
+		width: 100%;
         padding: 15px;
         margin-top: 20px;
         background-color: #3274d6;

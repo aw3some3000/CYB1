@@ -1,28 +1,4 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Register</title>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <link href="styles/style.css" rel="stylesheet" type="text/css">
-    </head>
-	<body>
-		<div class="register">
-			<h1>Register</h1>
-			<form action="register.php" method="post" autocomplete="off">
-				<label for="username">
-					<i class="fas fa-user"></i>
-				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
-					<i class="fas fa-lock"></i>
-				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
-				<input type="submit" value="Register">
-			</form>
-		</div>
-	</body>
-</html>
-
+<!-- тут ещё не разобрался -->
 
 <?php
 
@@ -44,7 +20,7 @@ if (empty($_POST['user']) || empty($_POST['pwd'])) {
 	exit('Please complete the registration form');
 }
 // We need to check if the account with that username exists.
-if ($stmt = $con->prepare('SELECT ID, UserName FROM users WHERE UserName = ?')) {
+if ($stmt = $conn->prepare('SELECT ID, UserName FROM users WHERE UserName = ?')) {
 	if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['user']) == 0) {
         exit('Username is not valid!');
     }
@@ -61,7 +37,7 @@ if ($stmt = $con->prepare('SELECT ID, UserName FROM users WHERE UserName = ?')) 
 		echo 'Username exists, please choose another!';
 	} else {
 		// Username doesnt exists, insert new account
-if ($stmt = $con->prepare('INSERT INTO users (UserName, PwdHash) VALUES (?, ?)')) {
+if ($stmt = $conn->prepare('INSERT INTO users (UserName, PwdHash) VALUES (?, ?)')) {
 	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
 	$pwd = password_hash($_POST['pwd'], MHASH_SHA256);
 	$stmt->bind_param("ss", $_POST['user'], '$pwd');

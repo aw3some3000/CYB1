@@ -24,10 +24,6 @@
             button {
                     width: 63px;
             }
-
-            .pressed {
-                    background-color: pink;
-            }
         </style>
 
         <script>
