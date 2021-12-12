@@ -1,4 +1,3 @@
-
 <?php include('check_register.php') ?>
 <!DOCTYPE html>
 <html>
