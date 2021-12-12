@@ -1,5 +1,5 @@
 <?php
-    include(".\include\params.php");
+    include("./include/params.php");
 
     // initializing variables
    
