@@ -12,8 +12,7 @@ $u = $_SESSION["user"];
 //$conn = mysqli_connect("localhost","root","","calc");
 // 4. Код, уязвимый для Sql-injection
 
-//include("D:\\AppParams\\params.php");
-include("../include/params.php");
+include($_ENV["MYAPP_CONFIG"]);
 $conn = mysqli_connect("$DB_URL","$DB_USER","$DB_PWD","$DB_NAME");
 // Убрали уязвимости - 1. Принцип наименьших привилегий (соблюли) 2. Слабый пароль 3. Секрет в коде
 

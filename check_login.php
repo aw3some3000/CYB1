@@ -1,7 +1,8 @@
 <?php
     session_start();
     //include("D:\\AppParams\\params.php");
-    include("./include/params.php");
+    //include("./include/params.php");
+    include($_ENV["MYAPP_CONFIG"]);
 ?>
 
 <html>
