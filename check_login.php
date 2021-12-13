@@ -2,7 +2,8 @@
     session_start();
     //include("D:\\AppParams\\params.php");
     //include("./include/params.php");
-    include($_ENV["MYAPP_CONFIG"]);
+    //include($_ENV["MYAPP_CONFIG"]);
+    include(getenv("MYAPP_CONFIG"));
 ?>
 
 <html>

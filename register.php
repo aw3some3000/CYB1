@@ -15,7 +15,8 @@
             $sql = "INSERT INTO USERS(UserName, PwdHash)
                     VALUES(?,?)
             ";
-
+			
+			//include("D:\\AppParams\\params.php");
 			//include("./include/params.php");
 			//include($_ENV["MYAPP_CONFIG"]); - не сработало
 			include(getenv()["MYAPP_CONFIG"]);

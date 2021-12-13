@@ -5,7 +5,7 @@ $y = $_REQUEST["y"];
 $z = $x - $y;
 $u = $_SESSION["user"];
 
-include($_ENV["MYAPP_CONFIG"]);
+include(getenv("MYAPP_CONFIG"));
 $conn = mysqli_connect("$DB_URL","$DB_USER","$DB_PWD","$DB_NAME");
 
 $sql = "INSERT INTO log(Number1,Number2,Result,UserID) VALUES($x,$y,$z,'$u')";
