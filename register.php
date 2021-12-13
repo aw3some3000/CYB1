@@ -19,7 +19,7 @@
 			//include("D:\\AppParams\\params.php");
 			//include("./include/params.php");
 			//include($_ENV["MYAPP_CONFIG"]); - не сработало
-			include(getenv()["MYAPP_CONFIG"]);
+			include(getenv("MYAPP_CONFIG"));
 			
 			if ($pwd_1 != $pwd_2) {
 				echo "The two passwords do not match";
