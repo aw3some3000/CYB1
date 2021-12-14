@@ -27,6 +27,7 @@
         </style>
 
         <script>
+            // Это комментарий JS
             function plus() {
                 var x = document.getElementById("x").value;
                 var y = document.getElementById("y").value;

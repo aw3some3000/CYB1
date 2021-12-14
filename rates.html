@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <!-- Это комментарий HTML -->
+        <meta charset="utf-8" />
+        <title></title>
+        <script>
+            function getRates() {
+                var url = "https://www.cbr-xml-daily.ru/daily_json.js";
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET",url,false);
+                xhr.send();
+                
+                var text = xhr.responseText;
+                // Отладочный вывод
+                // console.log(text);
+
+                var rates = JSON.parse(text);
+                console.log(rates.Valute);
+
+                var aud = "(" + rates.Valute.AUD.CharCode + ")" + " " + rates.Valute.AUD.Name + ":" + " " + rates.Valute.AUD.Value;
+                document.getElementById("AUD").innerText = aud;
+                var azn = "(" + rates.Valute.AZN.CharCode + ")" + " " + rates.Valute.AZN.Name + ":" + " " + rates.Valute.AZN.Value;
+                document.getElementById("AZN").innerText = azn;
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1>Здесь можно узнать курсы валют</h1>
+        <button onclick="getRates();">Получить</button></body>
+        <div>
+        <p id="AUD"></p>
+        <p id ="AZN"></p>
+        </div>
+    </body>
+</html>
