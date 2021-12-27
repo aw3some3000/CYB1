@@ -22,7 +22,7 @@
 			include(getenv("MYAPP_CONFIG"));
 			
 			if ($pwd_1 != $pwd_2) {
-				echo "The two passwords do not match";
+				echo "Пароли не совпадают";
 			  }
             $conn = mysqli_connect($DB_URL,$DB_USER,$DB_PWD,$DB_NAME);
             // Нудная, но необходимая процедура передачи параметров 
@@ -40,7 +40,8 @@
         
     ?>
     	<div class="register">
-			<h1>Registration</h1>
+		<h4 style = text-align:center;><a href="index_.html">На главную</a></h4>
+			<h1>Регистрация</h1>
 			<form action="register.php" method="post" autocomplete="off">
             	<label for="username">
 					<i class="fas fa-user"></i>
@@ -56,7 +57,7 @@
 				<input type="password" name="pwd_2" placeholder="Confirm_Password" required>
 				<input type="submit" name="Register" value="Register">
                 <p>
-  		            Already a member? <a href="login.php">Sign in</a>
+  		            Уже зарегистрированы? <a href="login.php">Авторизуйтесь</a>
   	            </p>
             </form>
     	</div>

@@ -14,6 +14,8 @@
         
         <!-- Это комментарий HTML -->
         <meta charset="utf-8" />
+        <link href="styles/main.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
         <style>
             input,button {
                 width: 140; 
@@ -60,11 +62,12 @@
         </script>
     </head>
     <body>
+        <a href="index_.html">На главную</a> 
         <h1>Калькулятор</h1>
         <input id="x" /><br />
         <input id="y" /><br />
         <button id="btn1" onclick="plus();">+</button>
         <button id="btn2" onclick="minus();">-</button><br />
-        <input id="z" />      
+        <input id="z" />     
     </body>
 </html>

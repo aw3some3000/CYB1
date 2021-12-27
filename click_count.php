@@ -4,9 +4,11 @@
 <html>
     <head>
         <meta charset="utf-8" />
-       
+        <link href="styles/main.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <a href="index_.html">На главную</a> 
         <h1>Считаем щелчки</h1>
         <form>
             <button id="btn1">Щёлкни здесь</button>
