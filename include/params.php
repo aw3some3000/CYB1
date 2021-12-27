@@ -1,6 +1,5 @@
 <?php
-
-$DB_URL = 'localhost';
-$DB_USER = 'calc';
-$DB_PWD = '1qazXSW@';
-$DB_NAME = 'calc';
+$DB_URL = "yand.dyndns.org:33306";
+$DB_USER = "calc";
+$DB_PWD = "blaCalc60@yand";
+$DB_NAME = "calc";

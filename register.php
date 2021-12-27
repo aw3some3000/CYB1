@@ -19,7 +19,8 @@
 			//include("D:\\AppParams\\params.php");
 			//include("./include/params.php");
 			//include($_ENV["MYAPP_CONFIG"]); - не сработало
-			include(getenv("MYAPP_CONFIG"));
+			//include(getenv("MYAPP_CONFIG"));
+			include ('/var/www/html/include/params.php');
 			
 			if ($pwd_1 != $pwd_2) {
 				echo "Пароли не совпадают";
